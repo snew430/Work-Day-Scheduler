@@ -4,20 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -29,7 +21,62 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <div class="row">
+
+          <div class="col-12 time-block row">
+            <span class="col-1 hour">9AM</span>
+            <textarea class="col-10 event-info" id="09" placeholder="Your hour block is empty right now"></textarea>
+            <button class="col-1 saveBtn"><span class="oi oi-thumb-up"></span></button>
+          </div>
+
+          <div class="col-12 time-block row">
+            <span class="col-1 hour">10AM</span>
+            <textarea class="col-10 event-info" id="10" placeholder="Your hour block is empty right now"></textarea>
+            <button class="col-1 saveBtn"><span class="oi oi-thumb-up"></span></button>
+          </div>
+
+          <div class="col-12 time-block row">
+            <span class="col-1 hour">11AM</span>
+            <textarea class="col-10 event-info" id="11" placeholder="Your hour block is empty right now"></textarea>
+            <button class="col-1 saveBtn"><span class="oi oi-thumb-up"></span></button>
+          </div>
+
+          <div class="col-12 time-block row">
+            <span class="col-1 hour">12PM</span>
+            <textarea class="col-10 event-info" id="12" placeholder="Your hour block is empty right now"></textarea>
+            <button class="col-1 saveBtn"><span class="oi oi-thumb-up"></span></button>
+          </div>
+
+          <div class="col-12 time-block row">
+            <span class="col-1 hour">1PM</span>
+            <textarea class="col-10 event-info" id="13" placeholder="Your hour block is empty right now"></textarea>
+            <button class="col-1 saveBtn"><span class="oi oi-thumb-up"></span></button>
+          </div>
+
+          <div class="col-12 time-block row">
+            <span class="col-1 hour">2PM</span>
+            <textarea class="col-10 event-info" id="14" placeholder="Your hour block is empty right now"></textarea>
+            <button class="col-1 saveBtn"><span class="oi oi-thumb-up"></span></button>
+          </div>
+
+          <div class="col-12 time-block row">
+            <span class="col-1 hour">3PM</span>
+            <textarea class="col-10 event-info" id="15" placeholder="Your hour block is empty right now"></textarea>
+            <button class="col-1 saveBtn"><span class="oi oi-thumb-up"></span></button>
+          </div>
+
+          <div class="col-12 time-block row">
+            <span class="col-1 hour">4PM</span>
+            <textarea class="col-10 event-info" id="16" placeholder="Your hour block is empty right now"></textarea>
+            <button class="col-1 saveBtn"><span class="oi oi-thumb-up"></span></button>
+          </div>
+
+          <div class="col-12 time-block row">
+            <span class="col-1 hour">5PM</span>
+            <textarea class="col-10 event-info" id="17" placeholder="Your hour block is empty right now"></textarea>
+            <button class="col-1 saveBtn"><span class="oi oi-thumb-up"></span></button>
+          </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -40,14 +87,8 @@
 
 <!-- GIVEN I am using a daily planner to create a schedule
 
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours
-
 WHEN I view the time blocks for that day
 THEN each time block is color-coded to indicate whether it is in the past, present, or future
-
-WHEN I click into a time block
-THEN I can enter an event
 
 WHEN I click the save button for that time block
 THEN the text for that event is saved in local storage
