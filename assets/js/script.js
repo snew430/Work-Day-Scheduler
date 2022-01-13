@@ -33,7 +33,6 @@ var saveTask = function () {
 // ==============LOAD TASK======================
 
 var loadTasks = function () {
-
   // pull the local storage
   tasks = JSON.parse(localStorage.getItem("tasks"));
 
@@ -43,15 +42,14 @@ var loadTasks = function () {
   }
 
   // For each task assign the text to the id
-  $(tasks).each(function(index) {
-    $("#"+tasks[index].id).val(tasks[index].text)
-  })
+  $(tasks).each(function (index) {
+    $("#" + tasks[index].id).val(tasks[index].text);
+  });
 
   // check the initial time against the time-blocks
   $(".time-block .event-info").each(function (index, el) {
     auditTask(el);
   });
-
 };
 
 // ==============================================
@@ -59,7 +57,6 @@ var loadTasks = function () {
 // ==============AUDIT THE CALENDAR DATES EVERY 30 MINUTES=============WORKS
 
 var auditTask = function (taskEl) {
-
   // Takes the current time and the ID of the textarea it is checking
   var currentTime = moment().format("HH");
   var time = $(taskEl).attr("id");
@@ -70,7 +67,6 @@ var auditTask = function (taskEl) {
   // sets the appropriate class to the textarea depending on the current time
   if (time < currentTime) {
     $(taskEl).addClass("past");
-    $(taskEl).prop("readonly", true);
   } else if (time === currentTime) {
     $(taskEl).addClass("present");
   } else if (time > currentTime) {
